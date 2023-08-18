@@ -1,21 +1,10 @@
-// Given array and object
-let players = ['Alice', 'Bob', 'Charlie'];
-let person = {
-  name: 'John',
-  age: 30,
-  country: 'USA'
-};
+let players = ["John", "Jane", "Mike"];
+let person = {"name": "John", "age": 30};
 
-// Create a variable team that refers to the players array
 let team = players;
+let team1 = players.slice();
+let cap1 = person;
 
-// Create a variable team1 that is a copy of the players array
-let team1 = players.slice(); // Using slice() to create a shallow copy of the array
-
-// Create a variable cap1 that is a copy of the person object
-let cap1 = Object.assign({}, person); // Using Object.assign() to create a shallow copy of the object
-
-// Test
-console.log(team);   // Output: ['Alice', 'Bob', 'Charlie']
-console.log(team1);  // Output: ['Alice', 'Bob', 'Charlie']
-console.log(cap1);   // Output: { name: 'John', age: 30, country: 'USA' }
+console.log(team); // ["John", "Jane", "Mike"]
+console.log(team1); // ["John", "Jane", "Mike"]
+console.log(cap1); // {"name": "John", "age": 30}
